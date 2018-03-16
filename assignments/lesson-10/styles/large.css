@@ -99,82 +99,24 @@ main section#thankyou {
 
 }
 
+.textandtitlebox {
+		border:none;
+		box-shadow:none;
+	} 
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 64em) {
-	/* Only CSS rules that need to be changed to meet the layout needs from medium to large/wide go in here */
-	
-	header, nav, main, section, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
-		/* Declare the maximum width and other main element rules to limit the stretch on wide views */
-		max-width:80%;
-		margin:15px auto 5px auto;
-		text-align:center;
-	}
-	header {
-		margin-top:8px;
-	}
-	header img {
-		margin-left:15%;
-		max-width:150px;
-		max-height:150px;
-	}
-	header .subheading {
-		font-size:24px;
-	}
-	article p { 
-		font-size:16px;
-	}
-	article p.town-article img { 
-		margin-left:10%;
-	}
-	
-	nav ul {
-		display:flex;
-		justify-content:center;
-		background-color:#0b032d;
-		margin:0 auto 0 auto;
-	}
-	nav li {
-		font-size:22px;
-	}
-	nav {
-		margin-bottom:0;
-		min-width:80%;
-	}
-	.container {
+.cityimgbox {
+		margin-top:1.5%;
 		width:100%;
-		margin-top:0;
-		display:block;
-	}
-	main {
-		margin-top:0;
-	}
-	main figure { 
-		width:100%;
-		position:static;
-		margin-bottom:40px;
-	}
-	main figure img { 
-		width:100%;
-	}
-	.threecitiescontainer {
+	} 
+
+.threecitiescontainer {
 		display:grid;
 		grid-template-columns:1fr 1fr 1fr;
-	}
-	.citycontainer {
+	} 
+
+.citycontainer {
 		margin:2%;
-		display:block;
+		display:inline-table;
 		padding:1px;
 		border:1px solid black;
 		background-color:#abb1bc;
@@ -183,94 +125,26 @@ main section#thankyou {
 		border-radius:10px;
 		box-shadow: 4px 4px 15px #1f242d;
 	}
-	.textandtitlebox {
-		border:none;
-		box-shadow:none;
-	}
-	.weatherlarge {
-		border:1px solid grey;
-		border-radius:10px;
-		box-shadow: 4px 4px 15px #1f242d;
-	}
-	.cityimgbox {
-		margin-top:1.5%;
-		width:100%;
-	}
-	.flipped {
+
+.flipped {
 		flex-direction:initial;
 	}
-	.large {
-		width:99%;
-		max-width:100%;
-	}
-	.gridbox figcaption {
-		display:none;
-	}
-	.grid {
-		margin-top:15px;
-		grid-template-columns:1fr 1fr 1fr;
-	}
-	.gridimg {
-		margin:0;
-	}
-	.gridbox:hover {
-		box-shadow: 1px 1px 100px #dcf763;
-		opacity: 1;
-	}
-	.gridbox {
-		opacity: .9;
-	}
-	.gridbox:hover figcaption {
-		display: block;
-	}
-	main section h2 {
-		font-size:28px;
-	}
-	.summary {
-		margin:0;
-		min-width:100%;
-		margin-top:20px;
-		margin-bottom:20px;
-	}
-	.summary h2 {
-		margin-top:20px;
-		margin-bottom:20px;
-	}
-	.mediumdisplay {
-		width:60%;
-		flex-direction: row-reverse;
-	}
-	.largedisplay {
+
+.largedisplay {
 		width:100%;
 		display:flex;
 		justify-content:center;
 		font-size:18px;
 	}
-	.current {
-		justify-content:space-around;
-		align-items:center;
-	}
-	.current p {
-		position:static;
-		width:50px;
-		font-size:22px;
-	}
-	.highlow {
-		position:static;
-		line-height:100%;
-		width:250px;
-	}
-	.conditions {
-		position:relative;
-		top:-5px;
-		margin:0px;
-		line-height:100%;
-		width:250px;
-	}
-	footer {
-		font-size:14px;
-	}
-}
+
+
+
+
+
+
+
+
+
 
 
 
