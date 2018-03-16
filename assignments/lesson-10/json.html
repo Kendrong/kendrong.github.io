@@ -46,58 +46,96 @@ body {
     <br>
     <br>   
     
-    <main>  
-        
-    <script>   
-        
-        
-        
-      var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        document.getElementById("demo").innerHTML = myObj.name;
-    }
-};
-xmlhttp.open("GET", "https://byui-cit230.github.io/weather/data/towndata.json", true);
-xmlhttp.send();
+   <main>
+	<div class="weathercontainer">
+	<div class="textandtitlebox medium weatherlarge">
+	<h2>Weather Story</h2>
+	<p>
+	Mauris in nisl mollis ante pharetra accumsan. Donec 
+	varius pretium quam eu scelerisque. Duis aliquet at magna facilisis 
+	faucibus. Proin nunc nisl, hendrerit ut semper ut, accumsan et orci. 
+	Cras accumsan lacinia semper. Aliquam sagittis libero non ex 
+	vehicula scelerisque.
+	</p>
+	</div>
+	<div class="cityimgbox">
+	<img class="homeimg" src="images/weatherstory.jpg" alt="Weather Story Photo">
+	</div>
+	</div>
+	<div class="threecitiescontainer">
+	<div class="citycontainer flipped">
+	<div class="textandtitlebox medium large">
+	<h2>Franklin City</h2>
+	<p>
+	Motto: <span class="jsondisplay" id="franklinmotto"></span>
+	</p>
+	<p>
+	Year Founded: <span class="jsondisplay" id="franklinfounded"></span>
+	</p>
+	<p>
+	Population: <span class="jsondisplay" id="franklinpop"></span>
+	</p>
+	<p>
+	Annual Rainfall: <span class="jsondisplay" id="franklinrainfall"></span>
+	</p>
+	</div>
+	<div class="cityimgbox">
+	<img class="homeimg" src="images/franklinTown.jpeg" alt="Franklin Photo">
 
-        
-        
-        
-        
-        </script>
-    
-    
-    <p>Take a look at <a href="https://byui-cit230.github.io/weather/data/towndata.json" target="_blank">Franklin Town</a></p>
-    <p>Take a look at <a href="https://byui-cit230.github.io/weather/data/towndata.json" target="_blank">Greenville Town</a></p> 
-    <p>Take a look at <a href="https://byui-cit230.github.io/weather/data/towndata.json" target="_blank">Springfield Town</a></p>    
-    
-    
+	</div>
+	</div>
+	<div class="citycontainer">
+	<div class="textandtitlebox medium large">
+	<h2>Greenville City</h2>
+	<p>
+	Motto: <span class="jsondisplay" id="greenvillemotto"></span>
+	</p>
+	<p>
+	Year Founded: <span class="jsondisplay" id="greenvillefounded"></span>
+	</p>
+	<p>
+	Population: <span class="jsondisplay" id="greenvillepop"></span>
+	</p>
+	<p>
+	Annual Rainfall: <span class="jsondisplay" id="greenvillerainfall"></span>
+	</p>
+	</div>
+	<div class="cityimgbox">
+	<img class="homeimg" src="images/greenville.jpg" alt="Greenville Photo">
 
-        
-        
-        
-        </script>
-    
+	</div>
+	</div>
+	<div class="citycontainer flipped">
+	<div class="textandtitlebox medium large">
+	<h2>Springfield City</h2>
+	<p>
+	Motto: <span class="jsondisplay" id="springfieldmotto"></span>
+	</p>
+	<p>
+	Year Founded: <span class="jsondisplay" id="springfieldfounded"></span>
+	</p>
+	<p>
+	Population: <span class="jsondisplay" id="springfieldpop"></span>
+	</p>
+	<p>
+	Annual Rainfall: <span class="jsondisplay" id="springfieldrainfall"></span>
+	</p>
+	</div>
+	<div class="cityimgbox">
+	<img class="homeimg" src="images/springfield.jpg" alt="Springfield Photo">
 
-    
-    </main>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+	</div>
+	</div>
+	</div>
+	</main>
+
+
+
+
+
+
+
+
     
     
     
@@ -119,6 +157,7 @@ xmlhttp.send();
 
   <script src="scripts/hamburger.js"></script>
   <script src="scripts/currentdate.js"></script>
+  <script src="js/loadinfo.js"></script>
 <script>
 document.getElementById("currentdate").innerHTML = Date();
 </script>
