@@ -1,0 +1,79 @@
+/* styles/main.css */
+body {
+ background-color: #333300;
+ color: #FFFFFF;
+}
+body { 
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+h1 {
+    text-align: center; 
+    background-color: red;
+    
+}
+
+h2 {
+    font-size: /* x.xrem */;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+}
+
+header, main, footer {
+    margin: 1.25rem auto;
+    padding: .5rem;
+     
+}
+
+
+
+
+.resize1 {
+    width: 400px;
+    height: auto;
+}
+
+.resize1 {
+    width: 300px;
+    height: auto;
+}
+
+
+
+
+header, footer, footer a {
+    text-align: center;
+    color: whitesmoke;
+}
+
+header img {
+    width: /*  */;
+    height: auto;
+    float: right;
+}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+   background-color: red; 
+
+} 
+
+img {
+    font-size: 50px;
+    height: inherit;
+    float: right;
+     width:22%;
+     height:22%; 
+    
+} 
+
+html {
+	margin: 0;
+	padding: 0;
+	}

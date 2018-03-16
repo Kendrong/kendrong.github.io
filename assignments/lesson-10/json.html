@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Franklin Weather Page</title>
+  <meta name="author" content="Jamaan G. Student">
+  <meta name="description" content="Franklin Weather Site">
+  <!-- external style references in the proper cascading order -->    
+  <link href="https://fonts.googleapis.com/css?family=#" rel="stylesheet">  <!-- Google API font reference -->
+  <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+  <link href="styles/main-5.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+  <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+  <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet"> 
+<style>
+body {
+    font-family: 'Josefin Slab', serif;
+}
+</style>
+    
+    
+</head>
+<body>
+
+  <header>
+    <img src="images\banner.png" alt="The site logo" width="100%" height="175px">
+    <h1  align="center"style="color:blue;font-family: cursive"></h1>
+    <div class="subheading"></div>
+  </header>
+
+  <!-- site navigation use placeholder references -->
+  <nav>
+    <ul class="main-nav">
+    	<li><a href="#">Home</a></li>
+    	<li><a href="https://byui-cit230.github.io/weather/data/towndata.json">Franklin</a></li>
+    	<li><a href="https://byui-cit230.github.io/weather/data/towndata.json">Greenville</a></li>
+    	<li><a href="https://byui-cit230.github.io/weather/data/towndata.json">Springfield</a></li>
+    	<li><a href="stormcenter.html">Storm Center</a></li>
+    	<li><a href="gallery.html">Gallery</a></li>
+    </ul>		
+  </nav>  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>   
+    
+    <main>  
+        
+    <script>   
+        
+        
+        
+      var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myObj.name;
+    }
+};
+xmlhttp.open("GET", "https://byui-cit230.github.io/weather/data/towndata.json", true);
+xmlhttp.send();
+
+        
+        
+        
+        
+        </script>
+    
+    
+    <p>Take a look at <a href="https://byui-cit230.github.io/weather/data/towndata.json" target="_blank">Franklin Town</a></p>
+    <p>Take a look at <a href="https://byui-cit230.github.io/weather/data/towndata.json" target="_blank">Greenville Town</a></p> 
+    <p>Take a look at <a href="https://byui-cit230.github.io/weather/data/towndata.json" target="_blank">Springfield Town</a></p>    
+    
+    
+
+        
+        
+        
+        </script>
+    
+
+    
+    </main>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer>
+    <aside>
+      6093 Urban Avenue 
+      Buttonwood Bay 
+      Belize City, Belize    
+    </aside>
+    <p class="footer-bar">&copy;2017 All Rights Reserved | The Network Weather |  <span id="currentdate"></span></p>
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/currentdate.js"></script>
+<script>
+document.getElementById("currentdate").innerHTML = Date();
+</script>
+
+</body>
+</html>
