@@ -1,0 +1,175 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Franklin Weather Page</title>
+  <meta name="author" content="Jamaan G. Student">
+  <meta name="description" content="Franklin Weather Site">
+  <!-- external style references in the proper cascading order -->    
+  <link href="https://fonts.googleapis.com/css?family=#" rel="stylesheet">  <!-- Google API font reference -->
+  <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+  <link href="styles/main-5.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+  <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+  <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet"> 
+<style>
+body {
+    font-family: 'Josefin Slab', serif;
+}
+</style>
+    
+    
+</head>
+<body>
+
+  <header>
+    <img src="images\banner.png" alt="The site logo" width="100%" height="175px">
+    <h1  align="center"style="color:blue;font-family: cursive"></h1>
+    <div class="subheading"></div>
+  </header>
+
+  <!-- site navigation use placeholder references -->
+  <nav>
+    <ul class="main-nav">
+    	<li><a href="#">Home</a></li>
+    	<li><a href="index.html">Franklin</a></li>
+    	<li><a href="#">Greenville</a></li>
+    	<li><a href="#">Springfield</a></li>
+    	<li><a href="#">Storm Center</a></li>
+    	<li><a href="gallery.html">Gallery</a></li>
+    </ul>		
+  </nav>
+    
+  <main>
+   
+      <br> 
+      <br>
+<form action="" method=post name=windform>
+<center>
+<table border=1 cellpadding=3 cellspacing=0 width="250">
+<tr>
+<td align=center>
+Wind Speed (MPH) =
+</td>
+<td align=center>
+<input type=text name=wind value="" size=6>
+</td>
+</tr>
+<tr>
+<td align=center>
+Air Temperature (ºF) =
+</td>
+<td align=center>
+<input type=text name=temp value="" size=6>
+</td>
+</tr>
+<tr>
+<td colspan=2 align=center>
+<br>
+<input type=button value="Calculate Wind Chill" onclick="windChill(this.form)">
+<p>
+<input name=windchill type=text value="" size=10> º F
+</td>
+<tr>
+</table>
+</center>
+</form>
+
+<script LANGUAGE="JavaScript">
+<!-- Begin
+function windChill(form) {
+wind=eval(form.wind.value);
+temp=eval(form.temp.value);
+chill=(0.0817*(3.71*(Math.pow(wind, 0.5))+
+5.81-0.25*wind)*(temp-91.4)+91.4);
+form.windchill.value = chill;
+}
+//  End -->
+</script>
+   
+    <h1 align="center"style="color:blue;font-family: cursive">The City of Franklin</h1>
+    <figure class="mypicture">
+      <img src="images\respon2.jpg"> 
+      <figcaption>Responsive Image Example</figcaption>    
+    </figure>
+    <section>
+      <h3>Weather Summary</h3>    
+      <div class="highlow">
+        <p>High: 90°F</p>  
+        <p>Low: 66°F</p>  
+      </div>
+      <div class="current">
+        Condition: Sunny
+        <picture>
+            <img src="images\sunny2.jpg" alt="Sunny Day" width="300" height="200" align="right">
+        </picture>
+      </div>   
+      <div class="conditions">
+        <p>Precipitation: 0%</p>  
+        <p>Wind Speed: 5 mph SW</p>  
+      </div>           
+    </section>
+        
+    <section class="forecast">
+      <h3>10 Day Forecast</h3>
+      <table>
+	    <thead>
+          <tr>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+            <th>Day 6</th>
+            <th>Day 7</th>
+            <th>Day 8</th>
+            <th>Day 9</th>
+            <th>Day 10</th>
+          </tr>
+		</thead>
+        <tbody>  
+          <tr>
+            <td>89&deg;F</td>
+            <td>87&deg;F</td>
+            <td>78&deg;F</td>
+            <td>75&deg;F</td>
+            <td>72&deg;F</td>
+            <td>72&deg;F</td>
+            <td>79&deg;F</td>
+            <td>83&deg;F</td>
+            <td>85&deg;F</td>
+            <td>89&deg;F</td>
+          </tr>
+		</tbody>
+      </table>
+    </section>
+      
+    <article>
+      <h3>Franklin Breaks Record</h3>	
+      <p class="town-article">
+        <img src="images\forest.jpeg" alt="" width="300" height="200"align="bottom">
+        After battering St. Lucia and Jamaica last week, Hurricane Dean came ashore near Costa Maya or Majahual, Quintana Roo, Mexico, around 2:30 a.m. on Tuesday, August 21st, 2007. The following afternoon, Dean made a second landfall with 100-mile per hour winds at Tecolutla, Mexico, as a Category Two hurricane, and at last report it was surviving as a tropical depression over inland Mexico. Even though Dean’s eye landed north of Belize early Tuesday, the hurricane battered the northern districts which are closer to our border with Mexico. According to The National Meteorological Service Dean made landfall only 43 miles north of Corozal Town, Belize’s northernmost municipality, where it caused the bulk of its destruction.
+      </p>
+		</article>		  
+  
+  </main>
+    
+  <footer>
+    <aside>
+      6093 Urban Avenue 
+      Buttonwood Bay 
+      Belize City, Belize    
+    </aside>
+    <p class="footer-bar">&copy;2017 All Rights Reserved | The Network Weather |  <span id="currentdate"></span></p>
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/currentdate.js"></script>
+<script>
+document.getElementById("currentdate").innerHTML = Date();
+</script>
+
+</body>
+</html>
