@@ -39,7 +39,7 @@ header {
 	width:250px;
 	height:100px;
 	float:left;
-	background:url('../images/logo.png');
+	background:url('../images/logo.j');
 	background-color:rgb(235, 253, 212);
 	opacity:1.0;
 }
@@ -87,7 +87,7 @@ main {
 	left:20px;
 	width:600px;
 	height:250px;
-	background:url('../images/head_image.jpg');
+	background:url('../images/head_image.png');
 	border-radius:5px;
 }
 
